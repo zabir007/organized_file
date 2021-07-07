@@ -25,7 +25,7 @@ function treeHelper(dirPath, indent) {
         console.log(indent + '|--' + fileName);
     } else {
         let dirName = path.basename(dirPath);
-        console.log(indent +'---' + dirName);
+        console.log(indent +'👉' + dirName);
         let children = fs.readdirSync(dirPath);
         for (let i = 0; i < children.length; i++) {
             let childPath = path.join(dirPath, children[i])
