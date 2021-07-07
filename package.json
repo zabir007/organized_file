@@ -1,0 +1,22 @@
+{
+  "name": "organized_file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "zed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zabir007/organized_file.git"
+  },
+  "author": "zabir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zabir007/organized_file/issues"
+  },
+  "homepage": "https://github.com/zabir007/organized_file#readme",
+  "bin": {
+    "zed": "index.js"
+  }
+}
