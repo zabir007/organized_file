@@ -1,9 +1,17 @@
-
 const fs = require('fs');
 const path = require('path');
-const types = require('./utility')
+
+const types = {
+    media: ['mp4', 'mkv'],
+    archive: ['zip', '7z', 'rar', 'tar', 'gz', 'ar', 'iso', 'xz'],
+    documents: ['docx', 'doc', 'pdf', 'xlsx', 'xls', 'odt', 'odp', 'odg', 'txt', 'ps'],
+    app: ['exe', 'dmg', 'pkg', 'deb', 'msi'],
+    programming: ['js', 'java', 'c', 'c++', 'ts', 'json', 'py']
+}
+
 // organize function
 function organizeFn(dirPath) {
+    let destPath;
     // console.log('organize command implemented');
     // 1. input-> directory path given
     if (dirPath === undefined) {

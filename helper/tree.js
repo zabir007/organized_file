@@ -4,12 +4,12 @@ const path = require('path');
 function treeFn(dirPath) {
     // console.log('tree command implemented');
     if (dirPath === undefined) {
-        console.log('kindly enter the path');
+        treeHelper(process.cwd(), "");
         return;
     } else {
         let doesExist = fs.existsSync(dirPath);
         if (doesExist) {
-            treeHelper(process.cwd(), "");
+            treeHelper(dirPath, "");
 
         } else {
             console.log('kindly enter the correct path');
@@ -25,11 +25,11 @@ function treeHelper(dirPath, indent) {
         console.log(indent + '|--' + fileName);
     } else {
         let dirName = path.basename(dirPath);
-        console.log(indent +'👉' + dirName);
+        console.log(indent + '👉' + dirName);
         let children = fs.readdirSync(dirPath);
         for (let i = 0; i < children.length; i++) {
             let childPath = path.join(dirPath, children[i])
-            treeHelper(childPath,indent +'\t')
+            treeHelper(childPath, indent + '\t')
         }
     }
 }
